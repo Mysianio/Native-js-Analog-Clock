@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.clockWrapper {
+  width: 100vw;
+  background-color: #1c1c1c;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+}
+.clockPoint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #1c1c1c;
+}
+
+.linesWrapper {
+  width: 100px;
+  animation: rotate 60s linear infinite;
+  height: 1px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.secondsLine {
+  width: 3px;
+  height: 200px;
+  background: red;
+}
+
+@keyframes rotate{
+  from{
+    transform: rotate(180deg)
+  }
+  to{
+    transform: rotate(560deg);
+  }
+}
