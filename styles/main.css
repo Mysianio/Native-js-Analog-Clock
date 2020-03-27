@@ -11,13 +11,17 @@ body {
   justify-content: center;
 }
 .clock {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
   width: 500px;
   height: 500px;
-  background-color: #fff;
+  background-position: center center;
+  background-clip: content-box;
+  background: url(../src/clock.jpg);
+  background-size: cover;
 }
 .clockPoint {
   display: flex;
@@ -30,8 +34,7 @@ body {
 }
 
 .linesWrapper {
-  width: 100px;
-  animation: rotate 60s linear infinite;
+  position: absolute;
   height: 1px;
   background-color: transparent;
   display: flex;
@@ -41,14 +44,17 @@ body {
 .secondsLine {
   width: 3px;
   height: 200px;
-  background: red;
+  background-color: #000;
 }
 
-@keyframes rotate{
-  from{
-    transform: rotate(180deg)
-  }
-  to{
-    transform: rotate(560deg);
-  }
+.minutesLine {
+  width: 4px;
+  height: 150px;
+  background-color: #000;
+}
+
+.hoursLine {
+  width: 5px;
+  height: 100px;
+  background-color: #000;
 }
